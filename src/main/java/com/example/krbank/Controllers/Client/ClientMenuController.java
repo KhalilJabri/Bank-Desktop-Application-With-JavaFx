@@ -1,5 +1,6 @@
 package com.example.krbank.Controllers.Client;
 
+import com.example.krbank.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -16,6 +17,19 @@ public class ClientMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        dashboard_btn.setOnAction();
+        addListeners();
+    }
+
+    private void addListeners() {
+        dashboard_btn.setOnAction(event -> onDashboard());
+        transaction_btn.setOnAction(event -> onTransaction());
+    }
+
+    private void onDashboard() {
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Dashboard");
+    }
+
+    private void onTransaction() {
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Transactions");
     }
 }
