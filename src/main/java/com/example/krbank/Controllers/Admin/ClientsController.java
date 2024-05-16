@@ -1,4 +1,4 @@
-package com.example.krbank.Controllers.Client;
+package com.example.krbank.Controllers.Admin;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -6,9 +6,8 @@ import javafx.scene.control.ListView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TransactionsController implements Initializable {
-
-    public ListView transactions_listview;
+public class ClientsController implements Initializable {
+    public ListView clients_listview;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
